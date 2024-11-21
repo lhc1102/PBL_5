@@ -6,7 +6,6 @@
 #define PHONE_NUMBER "+84334385064" // Số điện thoại nhận thông báo
 #define EMERGENCY_BUTTON_PIN 5      // Chân nút khẩn cấp
 const int MPU_addr = 0x68;          // Địa chỉ I2C của MPU-6050
-const unsigned long updateInterval = 20000; // Thời gian cập nhật ThingSpeak
 
 // Đối tượng GPS và Serial
 TinyGPSPlus gps;
@@ -23,7 +22,7 @@ boolean emergencyButtonPressed = false;
 float lastLatitude = 0.0, lastLongitude = 0.0;
 unsigned long lastUpdateTime = 0;
 unsigned long lastThingSpeakUpdate = 0;
-const unsigned long thingSpeakInterval = 20000;  // Cập nhật ThingSpeak mỗi 20 giây
+const unsigned long thingSpeakInterval = 10000;  // Cập nhật ThingSpeak mỗi 10 giây
 
 // Cấu hình ThingSpeak
 String apn = "v-internet"; // APN của Viettel
